@@ -1,0 +1,125 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background-color: #d47836;
+  overflow-y: hidden;
+}
+.app {
+  border-radius: 1rem;
+  box-shadow: 20px 20px 60px #b4662e, -20px -20px 60px #f48a3e;
+  height: 90vh;
+  width: 300px;
+  margin: auto;
+  margin-top: 1rem;
+  padding: 1rem;
+}
+.to-do-input-area {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  justify-content: center;
+  margin: auto;
+  padding: 0 0.5rem;
+  width: 245px;
+  box-shadow: inset 18px 18px 36px #b4662e, inset -18px -18px 36px #f48a3e;
+}
+.to-do-input-area input,
+.to-do-input-area button {
+  padding: 0.5rem;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: white;
+}
+.to-do-input-area input {
+  flex: 1;
+}
+.to-do-input-area button {
+  cursor: pointer;
+  padding: 0;
+}
+#filter {
+  cursor: pointer;
+  border: 0;
+  outline: 0;
+  display: block;
+  margin: auto;
+  width: 245px;
+  margin-top: 5px;
+  padding: 5px;
+  position: relative;
+  background: transparent;
+  color: white !important;
+  border: 1px solid #f48a3e;
+  border-radius: 5px;
+  /* box-shadow: inset 18px 18px 36px #b4662e, inset -18px -18px 36px #f48a3e; */
+
+}
+#filter * {
+  background: #b4662e;
+  color: white;
+}
+.list-items {
+  height: 73vh;
+  overflow-y: auto;
+}
+.list-items::-webkit-scrollbar {
+  display: none;
+}
+.list-items li {
+  box-shadow: inset 18px 18px 36px #b4662e, inset -18px -18px 36px #f48a3e;
+}
+.to-do-input-area .fa {
+  font-size: 1.2rem;
+  color: #fff;
+}
+.to-do-list {
+  padding: 1rem 0;
+}
+.to-do-item {
+  width: 245px;
+  display: flex;
+  align-items: stretch;
+  margin: auto;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+.to-do-item p {
+  padding: 0.5rem;
+  flex: 1;
+  overflow-wrap: anywhere;
+}
+.fa-check {
+  background: greenyellow;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+.fa-trash {
+  background: #f3583d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+.completed {
+  opacity: 0.5;
+}
+.completed p {
+  text-decoration: line-through;
+}
+.fall {
+  transition: all 0.5s ease;
+  transform: translateY(8rem) rotate(20deg);
+  opacity: 0;
+}
